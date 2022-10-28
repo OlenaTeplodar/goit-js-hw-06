@@ -15,24 +15,8 @@ const images = [
 
 const galeryContainerEl = document.querySelector('.gallery');
 
-const liEl = document.createElement('li');
-liEl.classList.add('gallery__item');
-// const imgEl = gallery__item.createElement("img");
-// imgEl.classList.add('image');
-liEl.textContent = `<img src="${images.url}" alt="${images.alt}">`;
+const makeGalery = images
+  .map((img) => `<li><img src="${img.url}" alt="${img.alt}"></li>`)
+  .join("");
 
-galeryContainerEl.insertAdjacentHTML('afterbegin', liEl);
-// console.log(imgEl);
-console.log(liEl);
-// const makeGalery = ({ url, alt }) => {
-//   console.log(`${ url }`);
-//   console.log(alt);
-//    return gallery.insertAdjacentHTML('afterbegin', `<img url=${url}; alt= ${alt};>`)
-
-// }
-
-// galeryContainerEl.insertAdjacentHTML(
-//   "afterbegin",
-//   "<img images.url; images.alt;>"
-// );
-// console.log(galeryContainerEl);
+galeryContainerEl.insertAdjacentHTML("afterbegin", makeGalery);
