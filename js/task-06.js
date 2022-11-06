@@ -12,5 +12,6 @@ function onLengthControl(event) {
         refs.lengthControl.classList.remove("invalid"); //знімаю цей класс, щоб при видаленні зайвих символів все працювало
         return;
     }
-    refs.lengthControl.classList.add('invalid')
+    refs.lengthControl.classList.add('invalid');
+    refs.lengthControl.classList.remove("valid");
 }

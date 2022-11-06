@@ -14,6 +14,5 @@ function onCountDecrement() {
 }
 
 function onCountIncrement() {
-    refs.countValue.value = counterValue += 1;
-    refs.countValue.textContent = refs.countValue.value;
+    refs.countValue.textContent = counterValue += 1;
 }

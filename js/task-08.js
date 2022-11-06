@@ -17,14 +17,14 @@ function onFormSubmit(event) {
     elements: { email, password },
   } = event.currentTarget; // створюємо нову змінну - елемент як об'єкт з властивостями(через деструктуризацію)
 
-if (email.value === "" || password.value.trim() === "") {
-    alert("Потрібно заповнити всі поля!"); // перевірка на заповненість полів у елелмента
-    } else {
-    const formObj = {};             // створення об'єкту, присвоєння йому значень та виведення
-    formObj.email = email.value;
-    formObj.password = password.value;
-    console.log(formObj);
-    event.currentTarget.reset();    // очищення форми
-    }
+if (email.value.trim() === "" || password.value.trim() === "") {
+  alert("Потрібно заповнити всі поля!"); // перевірка на заповненість полів у елелмента
+} else {
+  const formObj = {}; // створення об'єкту, присвоєння йому значень та виведення
+  formObj.email = email.value.trim();
+  formObj.password = password.value.trim();
+  console.log(formObj);
+  event.currentTarget.reset(); // очищення форми
+}
 }
 
