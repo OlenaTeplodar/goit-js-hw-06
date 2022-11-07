@@ -22,13 +22,19 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+ul {
+    display: flex;
+  justify-content: space-around;
+}
 
 li {
   list-style: none;
   margin: 0;
+  width: 30%;
 }
 
 img {
+  display: block;
   height: 100%;
-  width: 100%;
+  max-width: 100%;
 }
